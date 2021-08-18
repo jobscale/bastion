@@ -7,4 +7,5 @@ RUN sed -i -e 's/# ja_JP.UTF-8 UTF-8/ja_JP.UTF-8 UTF-8/' /etc/locale.gen && loca
 RUN mkdir -p /run/sshd && ssh-keygen -A
 COPY entry .
 RUN rm -fr /var/lib/apt/lists/*
+EXPOSE 22
 ENTRYPOINT ./entry
