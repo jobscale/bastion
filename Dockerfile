@@ -1,4 +1,4 @@
-FROM node:bullseye-slim
+FROM node:lts-bullseye
 SHELL ["bash", "-c"]
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get install -y openssh-server sudo locales git zip unzip vim \
