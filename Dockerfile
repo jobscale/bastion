@@ -1,7 +1,7 @@
-FROM node:lts-bullseye
+FROM node:lts-bullseye-slim
 SHELL ["bash", "-c"]
 ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get update && apt-get install -y openssh-server sudo locales git zip unzip vim \
+RUN apt-get update && apt-get install -y openssh-server sudo locales git unzip vim \
     curl iproute2 dnsutils netcat inetutils-ping procps less python3-pip
 RUN rm -fr /var/lib/apt/lists/*
 RUN mkdir -p /run/sshd && ssh-keygen -A
