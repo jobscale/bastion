@@ -1,6 +1,6 @@
 FROM node:lts-bookworm-slim
 SHELL ["bash", "-c"]
-ENV DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y --no-install-recommends openssh-server sudo locales git unzip vim \
   curl iproute2 dnsutils ncat netcat-openbsd inetutils-ping procps less python3-pip \
  && apt-get clean && rm -fr /var/lib/apt/lists/*
