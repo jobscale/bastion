@@ -1,4 +1,4 @@
-FROM node:lts-tixie-slim
+FROM node:lts-trixie-slim
 SHELL ["bash", "-c"]
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y --no-install-recommends openssh-server sudo locales git unzip vim \
